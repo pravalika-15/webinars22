@@ -1,16 +1,189 @@
 #image2 {
     margin-top: -70px;
+    position: absolute;
+}
+#blue {
+    color: #186CCF;
+}
+
+#search {
+    background-color: #186CCF;
+}
+
+#row2 .box{
+    position: relative;
 }
 
 
+.button1 {
+    background-color: #0E3C6E;
+    color: white;
+}
+#text2 {
+    position: absolute;
+    bottom: 15rem;
+    left: 3.5rem;
+    color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+
+
+
+
+  .card {
+    margin: 1rem auto;
+    position: relative; 
+  }
+  
+  .card-body {
+    z-index: 2;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+.image .card {
+    margin: 1rem auto;
+    position: relative; 
+  }
+  
+.image .card-body {
+    z-index: 2;
+    position: absolute;
+    top: 25rem;
+    left: 2rem;
+    color: black;
+  }
+
+
+  #image2 .card {
+    margin: 1rem auto;
+    position: relative; 
+  }
+  
+#image2 .card-body {
+    z-index: 2;
+    position: absolute;
+    top: 0rem;
+    left: 10rem;
+    color: black;
+  }
+
+
+#container3 input {
+    border-radius: 10px;
+}
+#container3 button {
+    border-radius: 10px;
+}
+
+
+#container2 #row4{
+    border-radius: 20px;
+    background-color: #0E3C6E;
+    color: white;
+}
+
+#container3 {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+.button2 {
+    background-color: white;
+    color: black;
+}
+#row3 p {
+    font-size: x-small;
+}
+
+#row3 h6 {
+    font-size: small;
+}
+#row3 a {
+    font-size: x-small;
+}
+
+@media (max-width:930px) {
+    #image2 .card {
+        margin: 1rem auto;
+        position: relative; 
+      }
+      
+    #image2 .card-body {
+        z-index: 2;
+        position: absolute;
+        top: 0rem;
+        left: 10rem;
+        color: black;
+        font-size: xx-small;
+      }
+}
+@media (max-width:1080px) {
+    .image .card {
+        margin: 1rem auto;
+        position: relative; 
+      }
+      
+    .image .card-body {
+        z-index: 2;
+        position: absolute;
+        top: 15rem;
+        left: 2rem;
+        color: black;
+    }
+
+    #image2 .card {
+        margin: 1rem auto;
+        position: relative; 
+      }
+      
+    #image2 .card-body {
+        z-index: 2;
+        position: absolute;
+        top: 0rem;
+        left: 10rem;
+        color: black;
+      }
+}
+
+@media (max-width:850px) {
+    #image2 .card {
+        margin: 1rem auto;
+        position: relative; 
+      }
+      
+    #image2 .card-body {
+        z-index: 2;
+        position: absolute;
+        top: 0rem;
+        left: 10rem;
+        color: black;
+      }
+}
 @media (max-width:750px) {
     #image2 {
         margin-top: -50px;
+    }
+    .image .card-body {
+        z-index: 2;
+        position: absolute;
+        top: 10rem;
+        left: 2rem;
+        color: black;
     }
 }
 
 @media (max-width:600px) {
     #image2 {
         margin-top: -35px;
+    }
+    .image .card-body {
+        z-index: 2;
+        position: absolute;
+        top: 5rem;
+        left: 2rem;
+        color: black;
     }
 }
