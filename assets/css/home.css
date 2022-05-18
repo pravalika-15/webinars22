@@ -78,8 +78,18 @@
 #container3 button {
     border-radius: 10px;
 }
+#image2 input {
+    opacity: 0.3;
+    border: white;
+}
 
+#image2 ::placeholder {
+    color: black;
+}
 
+a .btn:hover {
+    color: white;
+}
 #container2 #row4{
     border-radius: 20px;
     background-color: #0E3C6E;
