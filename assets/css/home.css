@@ -19,7 +19,12 @@
 }
 .button1 {
     background-color: #0E3C6E;
+   
     color: white;
+}
+
+#row2 img:hover {
+    transform: scale(1.1);
 }
 #text2 {
     position: absolute;
@@ -123,7 +128,12 @@ a .btn:hover {
     width: 30px;
     border-radius: 15px;
     background-color: #0E3C6E;
-  }
+}
+
+.card-img-overlay{
+   padding-left: 9rem; 
+   padding-top: 3rem;
+}
 
 @media (max-width:930px) {
     #image2 .card {
