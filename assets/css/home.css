@@ -14,7 +14,9 @@
     position: relative;
 }
 
-
+#row1 {
+    padding-top: 10rem;
+}
 .button1 {
     background-color: #0E3C6E;
     color: white;
@@ -30,8 +32,6 @@
 
 
 
-
-
   .card {
     margin: 1rem auto;
     position: relative; 
@@ -44,9 +44,11 @@
     bottom: 0;
     left: 0;
   }
-.image .card {
-    margin: 1rem auto;
+
+.image {
+    margin:  auto;
     position: relative; 
+    border-radius: 20px;
   }
   
 .image .card-body {
@@ -66,7 +68,7 @@
 #image2 .card-body {
     z-index: 2;
     position: absolute;
-    top: 0rem;
+    top: 3rem;
     left: 10rem;
     color: black;
   }
@@ -96,7 +98,7 @@ a .btn:hover {
     color: white;
 }
 
-#container3 {
+#container3 .row {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
 }
@@ -115,6 +117,13 @@ a .btn:hover {
     font-size: x-small;
 }
 
+.carousel-indicators button  {
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    background-color: #0E3C6E;
+  }
+
 @media (max-width:930px) {
     #image2 .card {
         margin: 1rem auto;
@@ -124,11 +133,11 @@ a .btn:hover {
     #image2 .card-body {
         z-index: 2;
         position: absolute;
-        top: 0rem;
+        bottom: 2rem;
         left: 10rem;
         color: black;
         font-size: xx-small;
-      }
+    }
 }
 @media (max-width:1080px) {
     .image .card {
@@ -152,10 +161,13 @@ a .btn:hover {
     #image2 .card-body {
         z-index: 2;
         position: absolute;
-        top: 0rem;
-        left: 10rem;
+        top: 1rem;
+        left: 2rem;
         color: black;
-      }
+    }
+    #row1 {
+        padding-top: 7rem;
+    }
 }
 
 @media (max-width:850px) {
@@ -167,14 +179,18 @@ a .btn:hover {
     #image2 .card-body {
         z-index: 2;
         position: absolute;
-        top: 0rem;
-        left: 10rem;
+        top: 1rem;
+        left: 4rem;
         color: black;
-      }
+    }
+    #row1 {
+        padding-top: 7rem;
+    }
 }
 @media (max-width:750px) {
     #image2 {
         margin-top: -50px;
+        font-size: xx-small;
     }
     .image .card-body {
         z-index: 2;
@@ -182,6 +198,21 @@ a .btn:hover {
         top: 10rem;
         left: 2rem;
         color: black;
+    }
+    #image2 .card {
+        margin: 1rem auto;
+        position: relative; 
+      }
+      
+    #image2 .card-body {
+        z-index: 2;
+        position: absolute;
+        top: 0rem;
+        left: 5rem;
+        color: black;
+    }
+    #row1 {
+        padding-top: 5rem;
     }
 }
 
@@ -195,5 +226,18 @@ a .btn:hover {
         top: 5rem;
         left: 2rem;
         color: black;
+    }
+    #image2 .card-body {
+        z-index: 2;
+        position: absolute;
+        top: 0rem;
+        left: 2rem;
+        color: black;
+    }
+    #image2 h3 {
+        font-size: large;
+    }
+    #row1 {
+        padding-top: 3rem;
     }
 }
