@@ -48,7 +48,7 @@
 .image {
     margin:  auto;
     position: relative; 
-    border-radius: 20px;
+    
   }
   
 .image .card-body {
@@ -63,6 +63,7 @@
   #image2 .card {
     margin: 1rem auto;
     position: relative; 
+    border-radius: 20px;
   }
   
 #image2 .card-body {
