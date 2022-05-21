@@ -1,0 +1,150 @@
+.head {
+    background: url('../img/Rectangle\ 2051.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+}
+.text1 {
+    color: #C6C6C6;
+}
+.head .row {
+    padding-left: 5rem;
+    padding-top: 2rem;
+}
+.head .row input {
+    opacity: 0.4;
+}
+
+
+.head .row .card {
+    /* background: url('../img/Rectangle\ 2028\ card.png');
+    background-repeat: no-repeat;
+    background-size: cover; */
+    /* height: 300px; */
+    border-radius: 20px;
+    margin-top: 10rem;
+}
+
+.head .row .col2 {
+    
+}
+
+#container1 {
+    border: 0.5px solid #0E3C6E;
+    box-sizing: border-box;
+    
+}
+
+#container1 .card {
+    box-shadow: 8px 8px 80px rgba(14, 60, 110, 0.2);
+    border-radius: 20px;
+    padding-left: 10rem;
+}
+
+
+.card {
+    margin: 1rem auto;
+    position: relative; 
+}
+  
+.card-body {
+    z-index: 2;
+    position: absolute;
+    right: 0;
+    bottom: 1rem;
+    left: 0;
+}
+
+#register{
+    background-color: white;
+    color: #0E3C6E;
+    border-radius: 10px;
+}
+
+.box2 {
+    padding-left: 8rem;
+    padding-right: 8rem;
+}
+#box1 {
+    padding-top: 12rem;
+    color:  #0E3C6E;
+}
+
+#box1 .row .card {
+    background-color: rgba(14, 60, 110, 0.2);
+}
+
+@media (max-width: 1205px) and (min-width:1035px) {
+    .box2 {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
+
+@media (max-width: 770px) {
+    .box2 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #box1 {
+        padding-top: 20rem;
+    }
+}
+
+#row3 .card {
+    margin: 1rem auto;
+    position: relative; 
+}
+  
+#row3 .card-body {
+    /* z-index: 2; */
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+
+#section3 .row{
+    border-bottom: 1px solid #000000;;
+}
+#section3 #plus {
+    font-size: xx-large;
+    font-weight: 100;
+}
+
+#section2 input {
+}
+
+#section2 ::placeholder {
+    color: black;
+}
+
+
+#search {
+    background-color: #186CCF; 
+}
+
+#container3 input {
+    border-radius: 10px;
+}
+#container3 button {
+    border-radius: 10px;
+}
+
+#container2 #row4{
+    border-radius: 20px;
+    background-color: #0E3C6E;
+    color: white;
+}
+
+#container3 .row {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.button2 {
+    background-color: white;
+    color: black;
+}
