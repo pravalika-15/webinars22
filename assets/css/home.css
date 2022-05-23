@@ -252,3 +252,9 @@
         padding-top: 3rem;
     }
 }
+
+@media (max-width:765px) {
+    #container2 img {
+        border-radius: 20px;
+    }
+}
