@@ -166,7 +166,7 @@
     }
 }
 
-@media (max-width:300px) {
+@media (max-width:380px) {
     #box1 .card1 {
         padding-left: 0.1rem;
         padding-right: 0.1rem;
