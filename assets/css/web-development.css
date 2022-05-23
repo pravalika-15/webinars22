@@ -17,10 +17,6 @@
 
 
 .head .row .card {
-    /* background: url('../img/Rectangle\ 2028\ card.png');
-    background-repeat: no-repeat;
-    background-size: cover; */
-    /* height: 300px; */
     border-radius: 20px;
     margin-top: 10rem;
 }
@@ -179,6 +175,16 @@
     #container1 {
         padding-left: 0rem;
         padding-right: 0rem;
+    }
+
+    #box1 {
+        padding-top: 15rem;
+    }
+    .head .row .card {
+        border-radius: 20px;
+        margin-top: 1rem;
+        padding-right: 0;
+        padding-left: 0;
     }
 }
 
