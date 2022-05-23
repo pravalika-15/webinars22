@@ -157,3 +157,33 @@
         border-radius: 20px;
     }
 }
+
+
+@media (max-width:765px) {
+    #box1 .card1 {
+        padding-left: 0.7rem;
+        padding-right: 0.7rem;
+    }
+    #container1 {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (max-width:300px) {
+    #box1 .card1 {
+        padding-left: 0.1rem;
+        padding-right: 0.1rem;
+    }
+
+    #container1 {
+        padding-left: 0rem;
+        padding-right: 0rem;
+    }
+}
+
+#box1 .card1 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
