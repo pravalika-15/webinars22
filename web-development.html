@@ -153,7 +153,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-12">
                     <div>
-                        <img class="img-fluid" src="./assets/img/Rectangle 2052.png" alt="">
+                        <img id="author_img" class="img-fluid" src="./assets/img/Rectangle 2052.png" alt="">
                     </div>
                     <div class="text-center" style="position: relative; top: -100px; color: white;">
                         <h2 >Alexa Rogue</h2>
@@ -389,6 +389,12 @@
           var d = data.lastdate;
           var mod = (new Date(d*1000).toUTCString());
         document.getElementById("updated_date").textContent=mod;
+
+
+        var url = data.author_img;
+        var img = document.getElementById('author_img');
+        img.src = url;
+
         
 
 
