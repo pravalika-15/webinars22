@@ -31,10 +31,10 @@
             </div>
             <div class="row text-white pt-5">
                 <div class="col-lg-6 col-md-6 col-sm-12">
-                    <h3><b>Web Development</b></h3>
-                    <h6>Become a Full-Stack Web Developer with just ONE course. HTML, CSS, Javascript, Node, React, MongoDB, Web3 and DApps</h6>
-                    <p>By : Alexa Rogue</p>
-                    <p class="d-inline">Last updated : 05/2022</p>
+                    <h3 id="1sttitle"><b>Loading..</b></h3>
+                    <h6 id="desc">...</h6>
+                    <p id="author">....</p>
+                    <p id="updated_date" class="d-inline">....</p>
                     <p class="d-inline">English</p>
                 </div>
 
@@ -71,36 +71,51 @@
                         <div class="row">
                             <div class="col text-center mx-auto">
                                 <div class="card py-2 text-center mx-auto px-1">
-                                    <h2>03</h2>
+                                    <h2 id="days">00</h2>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="card px-1 py-2">
-                                    <h2>00</h2>
+                                    <h2 id="hours">00</h2>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="card px-1 py-2">
-                                    <h2>00</h2>
+                                    <h2 id="minutes">00</h2>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card px-1 py-2">
+                                    <h2 id="seconds">00</h2>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="d-inline pt-5">
                         <div class="d-inline px-2">
+                            <a href="https://www.facebook.com/skygoalofficial">
                             <img class="img-fluid" style="width: 46px;height:46px;" src="./assets/img/facebook.png">
+                        </a>
                         </div>
                         <div class="d-inline px-2">
+                            <a href="https://www.instagram.com/skygoalofficial/">
                             <img class="img-fluid" style="width: 46px;height:46px;" src="./assets/img/instagram.png">
+                        </a>
                         </div>
                         <div class="d-inline px-2">
+                            <a href="https://www.linkedin.com/company/skygoal">
                             <img class="img-fluid" style="width: 46px;height:46px;" src="./assets/img/linkedin.png">     
+                        </a>
                         </div>
                         <div class="d-inline px-2">
+                            <a href="https://twitter.com/Skygoal8">
                             <img class="img-fluid" style="width: 46px;height:46px;" src="./assets/img/twitter.png">                            
+                        </a>
                         </div>
                         <div class="d-inline px-2">
+                            <a href="#">
                             <img class="img-fluid" style="width: 46px;height:46px;" src="./assets/img/whatsapp.png">                           
+                        </a>
                         </div>
 
                     </div>
@@ -334,5 +349,114 @@
     
 
     </section>
+
+
+    
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+  
+    <script>
+        firebase.initializeApp({
+        apiKey: 'AIzaSyBhvc1CZL3zMriXg_7TG2ISrxV8NB4qaK8',
+        authDomain: 'webinars-skygoal.firebaseapp.com',
+        projectId: 'webinars-skygoal'
+      });
+      var db = firebase.firestore();
+  
+  
+  
+      // QUERY GRABBING 
+      var url_string = window.location.href;
+      var url = new URL(url_string);
+      var docss = url.searchParams.get("id");
+      var tiTle = url.searchParams.get("title");
+      console.log(tiTle);
+      console.log(docss);
+  
+  
+      var docRef = db.collection("webinar").doc(docss);
+  
+  docRef.get().then(async(doc) => {
+      if (doc.exists) {
+          console.log("Document data:", doc.data());
+          var data = doc.data()
+  
+          document.getElementById("1sttitle").textContent=data.Title;
+          document.getElementById("desc").textContent=data.Desc;
+          document.getElementById("author").textContent=data.Author;
+
+          var d = data.lastdate;
+          var mod = (new Date(d*1000).toUTCString());
+        document.getElementById("updated_date").textContent=mod;
+        
+
+
+        //    var mod = firebase.firestore.Timestamp.toDate()
+          
+        //   document.getElementById("updated_date").textContent=mod;
+
+
+          var count_down = data.Countdown || false ;
+
+
+            const cntdown =(dte)=>{
+            const body = document.body;
+            const endTime = new Date(dte);
+            const daysEl = document.getElementById('days');
+            const hoursEl = document.getElementById('hours');
+            const minutesEl = document.getElementById('minutes');
+            const secondsEl = document.getElementById('seconds');
+
+
+            setInterval(updateCountdown, 1000)
+            setInterval(createSnowFlake, 50);
+
+
+            function updateCountdown() {
+                const startTime = new Date();
+                const diff = endTime - startTime;
+                const days = Math.floor(diff / 1000 / 60 / 60 / 24);
+                const hours = Math.floor(diff / 1000 / 60 / 60) % 24;
+                const minutes = Math.floor(diff / 1000 / 60) % 60;
+                const seconds = Math.floor(diff / 1000) % 60;
+                daysEl.innerHTML = days;
+                hoursEl.innerHTML = hours < 10 ? '0' + hours : hours;
+                minutesEl.innerHTML = minutes < 10 ? '0' + minutes : minutes;
+                secondsEl.innerHTML = seconds < 10 ? '0' + seconds : seconds;
+            }
+            } 
+  
+
+
+            if(count_down){
+                    cntdown(count_down);
+            }else(console.log("error is visible"));
+  
+      } else {
+          // doc.data() will be undefined in this case
+          console.log("No such document!");
+      }
+      }).catch((error) => {
+          console.log("Error getting document:", error);
+      });
+  
+      // db.collection("webinar").get().then((querySnapshot) => {
+      // querySnapshot.forEach((doc) => {
+      //     console.log(doc.id, " => ", doc.data());
+      //     var data = doc.data()
+      //     console.log(data.title)
+      // });
+  
+      
+  
+  
+  // });
+  
+
+
+
+    </script>
+
 </body>
 </html>
