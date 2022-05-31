@@ -112,14 +112,14 @@
     background-color: white;
     color: black;
 }
-#row3 p {
+.row3 p {
     font-size: x-small;
 }
 
-#row3 h6 {
+.row3 h6 {
     font-size: small;
 }
-#row3 a {
+.row3 a {
     font-size: x-small;
 }
 

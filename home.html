@@ -70,11 +70,20 @@
         </div>
 
 
-        <div class="row px-5" id="row2">
-            <div class="col-lg-4 col-md-4 col-sm-12 pb-5">
-                <img src="./assets/img/Education.png" class="img-fluid">
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-12 pb-5">
+        <div class="row px-5" id="tui">
+            <!-- <div class="col-lg-4 col-md-4 col-sm-12">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="./assets/img/Entrepreneurship.png" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+            </div> -->
+
+            
+            <!-- <div class="col-lg-4 col-md-4 col-sm-12 pb-5">
                 <img src="./assets/img/Careers.png" class="img-fluid">
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 pb-5">
@@ -97,7 +106,7 @@
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 pb-5">
                 <img src="./assets/img/Motivation (1).png" class="img-fluid">
-            </div>
+            </div> -->
         </div>
 
         <div class="row pb-4 pt-3">
@@ -357,5 +366,109 @@
 
 
     </section>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+
+    <script>
+        firebase.initializeApp({
+        apiKey: 'AIzaSyBhvc1CZL3zMriXg_7TG2ISrxV8NB4qaK8',
+        authDomain: 'webinars-skygoal.firebaseapp.com',
+        projectId: 'webinars-skygoal'
+      });
+      var db = firebase.firestore();
+  
+  
+  
+      // QUERY GRABBING 
+      var url_string = window.location.href;
+      var url = new URL(url_string);
+      var docss = url.searchParams.get("id");
+      var tiTle = url.searchParams.get("title");
+      console.log(tiTle);
+      console.log(docss);
+  
+  
+    //   var docRef = db.collection("webinar").doc(docss);
+  
+//   docRef.get().then(async(doc) => {
+//       if (doc.exists) {
+//           console.log("Document data:", doc.data());
+//           var data = doc.data()
+  
+//           document.getElementById("1sttitle").textContent=data.Title;
+//           document.getElementById("desc").textContent=data.Desc;
+//           document.getElementById("author").textContent=data.Author;
+
+//           var d = data.lastdate;
+//           var mod = (new Date(d*1000).toUTCString());
+//         document.getElementById("updated_date").textContent=mod;
+
+
+//         var url = data.author_img;
+//         var img = document.getElementById('author_img');
+//         img.src = url;
+
+
+//         var url = data.yt_url;
+//         var নাগেশ = document.getElementById('yt');
+//         নাগেশ.src = url;
+
+
+    
+  
+//       } else {
+//           // doc.data() will be undefined in this case
+//           console.log("No such document!");
+//       }
+//       }).catch((error) => {
+//           console.log("Error getting document:", error);
+//       });
+
+       
+
+      var tui = document.getElementById("tui")
+
+      db.collection("category").get().then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+            // doc.data() is never undefined for query doc snapshots
+            // console.log(doc.id, " => ", doc.data());
+            var dump = doc.data()
+
+            var paint = `<div class="col-lg-4 col-md-4 col-sm-12">
+                <a href="./cat.html?id=${doc.id}">
+                <div class="card" style="border-radius: 19px;">
+                    <img class="card-img-top" src="${dump.img_url}" alt="Card image cap">
+                    <div class="card-body">
+                      <h2 class="card-title text-white font-weight-bold" style="text-align: center; font-weight: 600;">${dump.name}</h2>
+                    </div>
+                  </div></a>
+            </div>`
+
+            tui.innerHTML+= paint;
+
+
+        });
+    })
+    .catch((error) => {
+        console.log("Error getting documents: ", error);
+    });
+  
+     
+      
+  
+  
+  // });
+
+
+
+
+  
+
+
+
+    </script>
 </body>
 </html>
