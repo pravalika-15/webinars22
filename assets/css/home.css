@@ -258,3 +258,38 @@
         border-radius: 20px;
     }
 }
+
+.search-bar-bg {
+    background: url('../img/Rectangle\ 11.png') no-repeat;
+    background-size: cover;
+    border-radius: 30px;
+}
+
+@media screen and (min-width: 600px) {
+    .search-bar-bg {
+        height: 215px;
+        
+    }
+}
+@media screen and (min-width: 200px) and (max-width: 600px) {
+    .search-bar-bg {
+        padding: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+.search-bar-container {
+    position: relative;
+}
+@media screen and (min-width: 600px) {
+    .search-bar-container {
+        margin-top: -80px;
+        
+    }
+}
+@media screen and (min-width: 200px) and (max-width: 600px) {
+    .search-bar-bg {
+        margin-top: -35px;
+    }
+}
