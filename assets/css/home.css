@@ -263,11 +263,12 @@
     background: url('../img/Rectangle\ 11.png') no-repeat;
     background-size: cover;
     border-radius: 30px;
+    
 }
 
 @media screen and (min-width: 600px) {
     .search-bar-bg {
-        height: 215px;
+        height: 285px;
         
     }
 }
