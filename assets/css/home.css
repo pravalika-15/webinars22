@@ -265,10 +265,29 @@
     border-radius: 30px;
     
 }
+.blue-pill {
+    background: url('../img/blue-pill.png') no-repeat;
+
+}
+
+@media screen and (min-width: 600px) {
+    .blue-pill {
+        height: 900px;
+        background-size: 40%;
+        background-position: right;
+    }
+}
+@media screen and (min-width: 200px) and (max-width: 600px) {
+    .blue-pill {
+        background-size: 90%;
+        height: 700px;
+        background-position: 100% 120%;
+    }
+}
 
 @media screen and (min-width: 600px) {
     .search-bar-bg {
-        height: 285px;
+        height: 250px;
         
     }
 }
@@ -285,7 +304,7 @@
 }
 @media screen and (min-width: 600px) {
     .search-bar-container {
-        margin-top: -80px;
+        margin-top: -280px;
         
     }
 }
@@ -293,4 +312,8 @@
     .search-bar-bg {
         margin-top: -35px;
     }
+}
+
+.fs-1-costom {
+    font-size: 50px;
 }
