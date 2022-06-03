@@ -1,38 +1,42 @@
-<header>
-    <nav class="navbar navbar-expand-lg bg-dark">
+ <header>
+    <nav style="background-color: white;" class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+          <a class="navbar-brand ps-lg-5" href="/home.html?">
+              <img style="width: 250px;" class="img-fluid" src="./assets/img/webinarslogo.png" alt="">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 navbutton mb-lg-0 ">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link ms-4" style="font-weight: 400;color: black;" aria-current="page" href="/home.html?">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
+                <a class="nav-link ms-4" style="font-weight: 400;color: black;" aria-current="page" href="#">Features</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link disabled">Disabled</a>
+                <a class="nav-link ms-4" style="font-weight: 400;color: black;" aria-current="page" href="#">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ms-4" style="font-weight: 400;color: black;" aria-current="page" href="#">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ms-4" style="font-weight: 400;color: black;" aria-current="page" href="#">Favorites</a>
               </li>
             </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+            <div class="d-flex " role="search">
+                <button class="btn btn-outline-primary rounded-pill py-2 px-3 me-5 " type="submit">
+                    <div>
+                        <div>
+                            Post a webinar
+                        </div>
+                    </div>
+                </button>
+            </div>
           </div>
+         
+          
         </div>
       </nav>
 </header>

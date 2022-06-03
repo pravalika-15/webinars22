@@ -280,7 +280,7 @@
 @media screen and (min-width: 200px) and (max-width: 600px) {
     .blue-pill {
         background-size: 90%;
-        height: 700px;
+        height: 800px;
         background-position: 100% 120%;
     }
 }
@@ -308,11 +308,11 @@
         
     }
 }
-@media screen and (min-width: 200px) and (max-width: 600px) {
+/* @media screen and (min-width: 200px) and (max-width: 600px) {
     .search-bar-bg {
         margin-top: -35px;
     }
-}
+} */
 
 .fs-1-costom {
     font-size: 50px;
